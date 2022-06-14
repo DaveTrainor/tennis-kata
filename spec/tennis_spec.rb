@@ -74,12 +74,12 @@ describe 'game' do
 
 		it 'returns "Advantage to Player 1" if the score is Player 1: 4, Player 2: 3' do
 			score = [4,3]
-			expect(current_score(score)).to eq 'Advantage to Player 1'
+			expect(current_score(score)).to eq 'Advantage to Player One'
 		end
 
 		it 'returns "Advantage to Player 1" if the score is Player 1: 5, Player 2: 4' do
 			score = [5,4]
-			expect(current_score(score)).to eq 'Advantage to Player 1'
+			expect(current_score(score)).to eq 'Advantage to Player One'
 		end
 
 		it 'returns "Game to Player Two" if player one scores once and player two scores four times' do
