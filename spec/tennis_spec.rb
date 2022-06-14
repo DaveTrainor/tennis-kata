@@ -82,5 +82,10 @@ describe 'game' do
 			expect(current_score(score)).to eq 'Advantage to Player 1'
 		end
 
+		it 'returns "Game to Player Two" if player one scores once and player two scores four times' do
+			score = [1,4]
+			expect(current_score(score)).to eq 'Game to Player Two'
+		end
+
 
 end

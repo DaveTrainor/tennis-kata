@@ -9,9 +9,10 @@ def current_score(score)
     if score[1] >= 3 && score[0] >= 3
       return 'Advantage to Player 1' if score[0] == score[1] + 1
       return 'score is Deuce' if even_score
-		end
+    end
   
     return 'Game to Player One' if score[0] >= 4 && score[0] >= score[1] + 2
+    return 'Game to Player Two' if score[1] >= 4 && score[1] >= score[0] + 2
     return "score is #{score_array[score[0]]} all" if even_score
 
 	
