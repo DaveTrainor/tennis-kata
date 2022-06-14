@@ -11,13 +11,14 @@ def current_score(score)
       return 'score is Deuce' if even_score
     end
   
-    return 'Game to Player One' if score[0] >= 4 && score[0] >= score[1] + 2
-    return 'Game to Player Two' if score[1] >= 4 && score[1] >= score[0] + 2
+		if score.any? {|player_score| player_score >= 4}
+			return 'Game to Player One' if score[0] >= score[1] + 2
+			return 'Game to Player Two' if score[1] >= score[0] + 2
+		end
     return "score is #{score_array[score[0]]} all" if even_score
 
 	
 	"score is #{score_array[score[0]]} - #{score_array[score[1]]}"
-    
     
     
 end
