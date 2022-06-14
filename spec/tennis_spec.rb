@@ -87,5 +87,10 @@ describe 'game' do
 			expect(current_score(score)).to eq 'Game to Player Two'
 		end
 
+		it 'returns "Advantage to Player 2" if the score is Player 1: 4, Player 2: 5' do
+			score = [4,5]
+			expect(current_score(score)).to eq 'Advantage to Player Two'
+		end
+
 
 end
