@@ -57,6 +57,17 @@ describe 'game' do
 			expect(current_score(score)).not_to eq 'Game to Player One'
 		end
 
+		it 'returns "Deuce if both players score 3' do
+			score = [3,3]
+			expect(current_score(score)).to eq 'score is Deuce'
+		end
+
+		it 'returns "Deuce if both players score 4' do
+			score = [4,4]
+			expect(current_score(score)).to eq 'score is Deuce'
+		end
+
+
 
 
 
