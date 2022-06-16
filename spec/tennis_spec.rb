@@ -1,6 +1,26 @@
 require_relative "../tennis.rb"
 
 describe 'game' do
+
+	context 'for a new game' do
+		game = TennisGame.new
+
+		it 'creates a new game with score' do
+			expect(game.point_scorer('')).to eq [0,0]
+		end
+
+		it 'changes the score to [1,0] when player one first scores' do
+			new_score_counter = 'P1 scores'
+			expect(game.point_scorer(new_score_counter)).to eq [1,0]
+		end
+
+		it 'changes the score to [2,0] when player one scores again' do
+			new_score_counter = 'P1 scores'
+			expect(game.point_scorer(new_score_counter)).to eq [2,0]
+		end
+	end
+		
+	context '#current_score' do
   
 		it 'returns "score is Love all" at game start' do
 			score = [0,0]
@@ -91,6 +111,8 @@ describe 'game' do
 			score = [4,5]
 			expect(current_score(score)).to eq 'Advantage to Player Two'
 		end
+
+	end
 
 
 end

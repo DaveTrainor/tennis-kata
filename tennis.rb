@@ -1,4 +1,16 @@
 
+class TennisGame
+
+	def initialize
+		@score = [0,0]
+	end
+
+	def point_scorer(new_score_counter)
+		@score[0] += 1 if new_score_counter == 'P1 scores'
+		@score
+	end
+
+end
 
 def current_score(score)
 
